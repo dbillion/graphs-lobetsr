@@ -16,5 +16,6 @@ jobs:
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
+          token: ${{sercrets.DEE_SECRET}}
           http_url: https://lobste.rs/newest.json
           downloaded_filename: newest.json
