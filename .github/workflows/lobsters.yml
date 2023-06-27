@@ -13,9 +13,10 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v3.5.2
+        with:
+          token: ${{secrets.DEE_SECRET}}
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
-          token: ${{secrets.DEE_SECRET}}
           http_url: https://lobste.rs/newest.json
           downloaded_filename: newest.json
