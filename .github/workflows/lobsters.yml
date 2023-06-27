@@ -13,9 +13,11 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v3.5.2
+        with: 
+          authorization: ${{secrets.DEE_SECRET}}
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
           http_url: https://lobste.rs/newest.json
           downloaded_filename: newest.json
-          authorization: ${{ secrets.DEE_SECRET }}
+         
