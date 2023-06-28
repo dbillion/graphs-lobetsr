@@ -11,14 +11,13 @@ jobs:
   scheduled:
     runs-on: ubuntu-latest
     steps:
-      - name: use token
-        run: echo ${{ secrets.MY_TOKS }}
       - name: Check out repo
         uses: actions/checkout@v3.5.2
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
-          http_url: https://${{ secrets.MY_TOKS }}@lobste.rs/newest.json
+          authorization: AMYS_SECRET
+          http_url: https://${{ secrets.AMYS_SECRET }}@lobste.rs/newest.json
           downloaded_filename: newest.json
           
          
