@@ -16,7 +16,7 @@ jobs:
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
-          authorization: AMYS_SECRET
+          github_token: ${{ secrets.AMYS_SECRET }}
           http_url: https://lobste.rs/newest.json
           downloaded_filename: newest.json
           
