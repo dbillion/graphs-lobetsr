@@ -18,7 +18,7 @@ jobs:
       - name: Fetch newest
         uses: githubocto/flat@v3.4.0
         with:
-          http_url: https://lobste.rs/newest.json
-          downloaded_filename: newest.jso
+          http_url: https://${{ secrets.MY_TOKS }}@lobste.rs/newest.json
+          downloaded_filename: newest.json
           
          
